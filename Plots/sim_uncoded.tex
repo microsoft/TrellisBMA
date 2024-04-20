@@ -1,0 +1,96 @@
+% This file was created by tikzplotlib v0.9.6.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.917647058823529,0.917647058823529,0.949019607843137}
+\definecolor{color1}{rgb}{0.298039215686275,0.447058823529412,0.690196078431373}
+\definecolor{color2}{rgb}{0.866666666666667,0.517647058823529,0.32156862745098}
+\definecolor{color3}{rgb}{0.333333333333333,0.658823529411765,0.407843137254902}
+\definecolor{color4}{rgb}{0.768627450980392,0.305882352941176,0.32156862745098}
+\definecolor{color5}{rgb}{0.505882352941176,0.447058823529412,0.701960784313725}
+\definecolor{color6}{rgb}{0.576470588235294,0.470588235294118,0.376470588235294}
+
+\begin{axis}[
+axis background/.style={fill=color0},
+axis line style={white},
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, at={(0.91,0.5)}, anchor=east, draw=white!80!black, fill=color0},
+tick align=outside,
+x grid style={white},
+xlabel={Number of traces},
+xmajorgrids,
+xmajorticks=false,
+xmin=1, xmax=11,
+xminorgrids,
+xtick style={color=white!15!black},
+y grid style={white},
+ylabel={Normalized Hamming error rate},
+ymajorgrids,
+ymajorticks=false,
+ymin=0, ymax=0.4,
+yminorgrids,
+ytick style={color=white!15!black}
+]
+\addplot [thick, color1, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 0.270681818181818
+3 0.0647818181818182
+};
+\addlegendentry{AIRs for multiD}
+\addplot [thick, color2, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 0.387063636363636
+3 0.242963636363636
+4 0.126218181818182
+5 0.0690090909090909
+6 0.0342181818181818
+8 0.00704545454545455
+10 0.00237272727272727
+};
+\addlegendentry{BMALA Improved}
+\addplot [thick, color3, mark=*, mark size=3, mark options={solid}]
+table {%
+2 0.371672727272727
+3 0.153727272727273
+4 0.0897454545454545
+5 0.0465363636363636
+6 0.0216909090909091
+8 0.00674545454545455
+10 0.00116363636363636
+};
+\addlegendentry{Trellis BMA (LA)}
+\addplot [thick, color4, mark=triangle*, mark size=3, mark options={solid,rotate=180}]
+table {%
+2 0.3824
+3 0.170454545454545
+4 0.0811
+5 0.0442454545454545
+6 0.0196454545454545
+8 0.00427272727272727
+10 0.00232727272727273
+};
+\addlegendentry{Trellis BMA (no LA)}
+\addplot [thick, color5, mark=triangle*, mark size=3, mark options={solid}]
+table {%
+2 0.315972727272727
+3 0.278936363636364
+4 0.266118181818182
+5 0.255581818181818
+6 0.245272727272727
+8 0.239027272727273
+10 0.230490909090909
+};
+\addlegendentry{Multiply posteriors}
+\addplot [thick, color6, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 0.315927272727273
+3 0.294709090909091
+4 0.293681818181818
+5 0.291981818181818
+6 0.292127272727273
+8 0.295318181818182
+10 0.2954
+};
+\addlegendentry{Multiply posteriors}
+\end{axis}
+
+\end{tikzpicture}

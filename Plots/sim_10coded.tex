@@ -1,0 +1,72 @@
+% This file was created by tikzplotlib v0.9.6.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.917647058823529,0.917647058823529,0.949019607843137}
+\definecolor{color1}{rgb}{0.298039215686275,0.447058823529412,0.690196078431373}
+\definecolor{color2}{rgb}{0.866666666666667,0.517647058823529,0.32156862745098}
+\definecolor{color3}{rgb}{0.333333333333333,0.658823529411765,0.407843137254902}
+\definecolor{color4}{rgb}{0.768627450980392,0.305882352941176,0.32156862745098}
+
+\begin{axis}[
+axis background/.style={fill=color0},
+axis line style={white},
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=white!80!black, fill=color0},
+tick align=outside,
+x grid style={white},
+xlabel={Number of traces},
+xmajorgrids,
+xmajorticks=false,
+xmin=1, xmax=11,
+xminorgrids,
+xtick style={color=white!15!black},
+y grid style={white},
+ylabel={Normalized Hamming error rate},
+ymajorgrids,
+ymajorticks=false,
+ymin=0, ymax=0.3,
+yminorgrids,
+ytick style={color=white!15!black}
+]
+\addplot [thick, color1, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 0.0593636363636364
+3 0.00707272727272727
+};
+\addlegendentry{MultiD}
+\addplot [thick, color2, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 0.107881818181818
+3 0.0390454545454545
+4 0.0219727272727273
+5 0.00964545454545455
+6 0.00399090909090909
+8 0.000545454545454545
+10 0.000327272727272727
+};
+\addlegendentry{Trellis BMA (LA)}
+\addplot [thick, color3, mark=*, mark size=3, mark options={solid}]
+table {%
+2 0.257309090909091
+3 0.0923
+4 0.0492090909090909
+5 0.0227636363636364
+6 0.0129090909090909
+8 0.00264545454545455
+10 0.000627272727272727
+};
+\addlegendentry{Trellis BMA (no LA)}
+\addplot [thick, color4, mark=triangle*, mark size=3, mark options={solid,rotate=180}]
+table {%
+2 0.0930636363636364
+3 0.0592545454545455
+4 0.0436090909090909
+5 0.0346363636363636
+6 0.0268272727272727
+8 0.0201727272727273
+10 0.0146909090909091
+};
+\addlegendentry{Multiply posteriors}
+\end{axis}
+
+\end{tikzpicture}

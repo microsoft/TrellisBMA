@@ -1,0 +1,79 @@
+% This file was created by tikzplotlib v0.9.6.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.917647058823529,0.917647058823529,0.949019607843137}
+\definecolor{color1}{rgb}{0.298039215686275,0.447058823529412,0.690196078431373}
+\definecolor{color2}{rgb}{0.866666666666667,0.517647058823529,0.32156862745098}
+\definecolor{color3}{rgb}{0.333333333333333,0.658823529411765,0.407843137254902}
+\definecolor{color4}{rgb}{0.768627450980392,0.305882352941176,0.32156862745098}
+\definecolor{color5}{rgb}{0.505882352941176,0.447058823529412,0.701960784313725}
+
+\begin{axis}[
+axis background/.style={fill=color0},
+axis line style={white},
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, at={(0.03,0.03)}, anchor=south west, draw=white!80!black, fill=color0},
+tick align=outside,
+x grid style={white},
+xlabel={Number of traces},
+xmajorgrids,
+xmajorticks=false,
+xmin=1.5, xmax=10.5,
+xminorgrids,
+xtick style={color=white!15!black},
+y grid style={white},
+ylabel={Information rate (in bits/base)},
+ymajorgrids,
+ymajorticks=false,
+ymin=0, ymax=2.1,
+yminorgrids,
+ytick style={color=white!15!black}
+]
+\addplot [thick, color1, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 1.90627738390888
+3 1.98283798800639
+};
+\addlegendentry{AIRs for multiD}
+\addplot [thick, color2, mark=*, mark size=3, mark options={solid}]
+table {%
+2 1.80165359911136
+3 1.96620331904065
+};
+\addlegendentry{BCJR-OR for multiD}
+\addplot [thick, color3, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 1.49006120643049
+3 1.68646995248733
+4 1.73087366642332
+5 1.7681501843985
+6 1.78486087358486
+8 1.79453236147605
+10 1.79893576494381
+};
+\addlegendentry{BCJR-OR Trellis BMA (LA)}
+\addplot [thick, color4, mark=*, mark size=3, mark options={solid}]
+table {%
+2 0.792925775095987
+3 1.37540724043241
+4 1.51796347346097
+5 1.60630612291782
+6 1.63819466096203
+8 1.67156538207653
+10 1.68099171047585
+};
+\addlegendentry{BCJR-OR Trellis BMA (no LA)}
+\addplot [thick, color5, mark=triangle*, mark size=3, mark options={solid,rotate=180}]
+table {%
+2 1.61609376238
+3 1.7441923311523
+4 1.80496365196094
+5 1.84107062503574
+6 1.87097815995058
+8 1.89669011185111
+10 1.92423049212315
+};
+\addlegendentry{BCJR-OR Multiply posteriors}
+\end{axis}
+
+\end{tikzpicture}

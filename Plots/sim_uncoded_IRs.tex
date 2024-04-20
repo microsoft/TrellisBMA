@@ -1,0 +1,91 @@
+% This file was created by tikzplotlib v0.9.6.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.917647058823529,0.917647058823529,0.949019607843137}
+\definecolor{color1}{rgb}{0.298039215686275,0.447058823529412,0.690196078431373}
+\definecolor{color2}{rgb}{0.866666666666667,0.517647058823529,0.32156862745098}
+\definecolor{color3}{rgb}{0.333333333333333,0.658823529411765,0.407843137254902}
+\definecolor{color4}{rgb}{0.768627450980392,0.305882352941176,0.32156862745098}
+\definecolor{color5}{rgb}{0.505882352941176,0.447058823529412,0.701960784313725}
+\definecolor{color6}{rgb}{0.576470588235294,0.470588235294118,0.376470588235294}
+
+\begin{axis}[
+axis background/.style={fill=color0},
+axis line style={white},
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, at={(0.5,0.09)}, anchor=south, draw=white!80!black, fill=color0},
+tick align=outside,
+x grid style={white},
+xlabel={Number of traces},
+xmajorgrids,
+xmajorticks=false,
+xmin=1.5, xmax=10.5,
+xminorgrids,
+xtick style={color=white!15!black},
+y grid style={white},
+ylabel={Information rate (in bits/base)},
+ymajorgrids,
+ymajorticks=false,
+ymin=0, ymax=2.1,
+yminorgrids,
+ytick style={color=white!15!black}
+]
+\addplot [thick, color1, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 1.86583199630188
+3 1.96779691479113
+};
+\addlegendentry{AIRs for multiD}
+\addplot [thick, color2, mark=*, mark size=3, mark options={solid}]
+table {%
+2 1.18436421316483
+3 1.74042400934658
+};
+\addlegendentry{BCJR-OR for multiD}
+\addplot [thick, color3, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 0.323228755684728
+3 1.19022630944696
+4 1.4273393640364
+5 1.58013964226951
+6 1.67063232808944
+8 1.72374807996019
+10 1.74378438848578
+};
+\addlegendentry{BCJR-OR Trellis BMA (LA)}
+\addplot [thick, color4, mark=*, mark size=3, mark options={solid}]
+table {%
+2 0.390839190388929
+3 1.12502588349439
+4 1.41362688230855
+5 1.52620075090209
+6 1.60242454259883
+8 1.64852193905458
+10 1.65488234841032
+};
+\addlegendentry{BCJR-OR Trellis BMA (no LA)}
+\addplot [thick, color5, mark=triangle*, mark size=3, mark options={solid,rotate=180}]
+table {%
+2 0.961318979522981
+3 1.0178498883183
+4 0.994195747280172
+5 0.94750945714545
+6 0.908992101800186
+8 0.732136934681901
+10 0.592056800824659
+};
+\addlegendentry{BCJR-OR Multiply posteriors}
+\addplot [thick, color6, mark=asterisk, mark size=3, mark options={solid}]
+table {%
+2 0.95133156024298
+3 0.970247751196889
+4 0.977056463821914
+5 0.975297554431944
+6 0.977506179296186
+8 0.974235151017952
+10 0.970428424444394
+};
+\addlegendentry{BCJR-OR Multiply posteriors}
+\end{axis}
+
+\end{tikzpicture}
