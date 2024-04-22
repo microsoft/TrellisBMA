@@ -1,6 +1,9 @@
 # Trellis BMA: coded trace reconstruction on IDS channels for DNA storage
 
-This repo contains an implementation of Trellis BMA algorithm from [https://arxiv.org/abs/2107.06440](https://arxiv.org/abs/2107.06440)
+This repo contains an implementation of Trellis BMA algorithm from [https://arxiv.org/abs/2107.06440](https://arxiv.org/abs/2107.06440) by Sundara Rajan Srinivasavaradhan, Sivakanth Gopi, Henry D. Pfister and Sergey Yekhanin.
+
+*Sequencing a DNA strand, as part of the read process in DNA storage, produces multiple noisy copies which can be combined to produce better estimates of the original strand; this is called trace reconstruction. One can reduce the error rate further by introducing redundancy in the write sequence and this is called coded trace reconstruction. In this paper, we model the DNA storage channel as an insertion-deletion-substitution (IDS) channel and design both encoding schemes and low-complexity decoding algorithms for coded trace reconstruction.
+We introduce Trellis BMA, a new reconstruction algorithm whose complexity is linear in the number of traces, and compare its performance to previous algorithms. Our results show that it reduces the error rate on both simulated and experimental data. The performance comparisons in this paper are based on a new dataset of traces that will be publicly released with the paper. Our hope is that this dataset will enable research progress by allowing objective comparisons between candidate algorithms.*
 
 > This repo has been populated by an initial template to help get you started. Please
 > make sure to update the content to build a great experience for community-building.
