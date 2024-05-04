@@ -329,6 +329,7 @@ class conv_code():
         for t in range(len(states)):
             mid_pt.append(len(states[t])//2)
 
+        stages[1] = min(stages[1], len(edges))
         for t in range(stages[0],stages[1]):
             for _, edge in edges[t].iterrows():
                 x = [t,t+1]

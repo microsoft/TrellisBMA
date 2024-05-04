@@ -452,7 +452,8 @@ class coded_ids_multiD():
         mid_pt = []
         for t in range(len(states)):
             mid_pt.append(len(states[t])//2)
-
+        
+        stages[1] = min(stages[1], len(edges))
         for t in trange(stages[0],stages[1], desc = "Drawing trellis."):
             for idx, edge in edges[t].iterrows():
                 if edge.type == "ins":
