@@ -15,6 +15,14 @@ As the maintainer of this project, please make a few updates:
 - Understanding the security reporting process in SECURITY.MD
 - Remove this section from the README
 
+## Quickstart instructions
+
+Please start with "Documentation_IDS_CC.ipynb" to understand usage and how to call Trellis BMA (and other algorithms). The documentation contains instructions for:
+- building a finite-state machine corresponding to a convolutional code (substitute this with similar code for your usecase)
+- building the IDS trellis on top of the FSM
+- running trellis BMA on the IDS trellis
+- visualization tools
+
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
