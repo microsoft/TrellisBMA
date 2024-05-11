@@ -426,7 +426,7 @@ class coded_ids_multiD():
         plt.yticks([])
         plt.xticks(range(stages[1]-stages[0]+1), self.time_type[stages[0]:stages[1]+1], fontsize = fontsize)
         plt.box(False)
-        plt.colorbar(edge_mapper)
+        # plt.colorbar(edge_mapper) #Disabling the colorbar to remove errors
         # plt.savefig("temp.png",format = "png", bbox_inches = "tight")
         plt.show()
     
@@ -491,7 +491,7 @@ class coded_ids_multiD():
         plt.yticks([])
         plt.xticks(range(stages[1]-stages[0]+1), self.time_type[stages[0]:stages[1]+1], fontsize = fontsize)
         plt.box(False)
-        plt.colorbar(edge_mapper)
+        #plt.colorbar(edge_mapper) #Disabling colorbar to remove errors
         plt.show()
 
     def modify_input_edges(self, input_prior = None):
